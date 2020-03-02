@@ -1,0 +1,23 @@
+.bg-company-red {
+    background-color: #c73636  !important;
+}
+
+.nav-item-active {
+    background-color: #9c1a1a;
+    color: black;
+}
+
+.nav-link-my {
+    color: white;
+    
+}
+
+.button-submit {
+    background-color: #c73636;
+    width: 100%;
+    height: 60px;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+}

@@ -1,0 +1,5 @@
+[
+    {"name": "Bootkit", "altName":"", "target":"Linux, Windows", "vector":"Infect naster boot record located on physical motherboard, before antivirus is initialized.", "malware":"Rootkits, Boot Sector Infector", "ttp":"Some antivirus can detect presence.", "modus":"Infect the boot sector before OS is initialized.", "refs":"https://securelist.com/attacks-before-system-startup/63725/", "toolset":"Tools"}
+    
+
+]

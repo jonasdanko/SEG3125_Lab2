@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='main.js'></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-company-red">
+        <a class="navbar-brand" href="index.html">APTracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="matrix.html">Matrix</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="add.html">Add APT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      
+    <div class = "container">
+        <h3>Add an Advanced Persistent Threat to The Matrix</h3>
+        <form id = "myForm">
+
+            <div class="form-group">
+              <label for="nameInput">Common Names</label>
+              <input class="form-control" id="nameInput">
+            </div>
+
+            <div class="form-group">
+                <label for="oNameInput">Other Names</label>
+                <input class="form-control" id="oNameInput">
+            </div>
+
+            <div class="form-group">
+                <label for="targetInput">Target Sector</label>
+                <input class="form-control" id="targetInput">
+            </div>
+
+            <div class="form-group">
+                <label for="vectorInput">Attack Vector</label>
+                <input class="form-control" id="vectorInput">
+            </div>
+
+            <div class="form-group">
+                <label for="malwareInput">Associated Malware</label>
+                <input class="form-control" id="malwareInput">
+            </div>
+            
+            <div class="form-group">
+              <label for="ttpInput">Tactics, Techniques & Procedures</label>
+              <textarea class="form-control" id="ttpInput" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="moInput">Modus Operandi</label>
+                <textarea class="form-control" id="moInput" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="toolsInput">Toolsets</label>
+                <textarea class="form-control" id="toolsInput" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="refsInput">References</label>
+                <textarea class="form-control" id="refsInput" rows="3"></textarea>
+            </div>
+            
+            <button class ="button-submit" type="button" id="addButton">Add APT</button>
+          </form>
+
+          <p id="test"></p>
+          
+          <br>
+          <br>
+          <script src = "add.js"></script>
+          
+    </div>
+</body>
+</html>
