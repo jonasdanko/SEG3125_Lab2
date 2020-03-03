@@ -20,11 +20,24 @@ if(true){
         document.getElementById("tools" + tablePos).innerHTML = apts[i].tools;
         ++tablePos;
     }
+    /*
+    for(var j = tablePos ; j<10 ; ++j){
+        document.getElementById("name"+j).style.display = "none";
+        document.getElementById("alt" + j).style.display = "none";
+        document.getElementById("target" + j).style.display = "none";
+        document.getElementById("vector" + j).style.display = "none";
+        document.getElementById("malware" + j).style.display = "none";
+        document.getElementById("ttp" + j).style.display = "none";
+        document.getElementById("mo" + j).style.display = "none";
+        document.getElementById("refs" + j).style.display = "none";
+        document.getElementById("tools" + j).style.display = "none";
+    }
+    */
 }
 
 function addAPT(){
-    var form = document.getElementsByName('apt-form')[0];
     var name = document.getElementById("nameInput").value;
+    var form = document.getElementsByName('apt-form')[0];
     var altName = document.getElementById("oNameInput").value;
     var target = document.getElementById("targetInput").value;
     var vector = document.getElementById("vectorInput").value;
@@ -33,18 +46,36 @@ function addAPT(){
     var modus = document.getElementById("moInput").value;
     var refs = document.getElementById("refsInput").value;
     var tools = document.getElementById("toolsInput").value;
-    form.reset();
-    document.getElementById("name" + tablePos).innerHTML = name;
-    document.getElementById("alt" + tablePos).innerHTML = altName;
-    document.getElementById("target" + tablePos).innerHTML = target;
-    document.getElementById("vector" + tablePos).innerHTML = vector;
-    document.getElementById("malware" + tablePos).innerHTML = malware;
-    document.getElementById("ttp" + tablePos).innerHTML = ttp;
-    document.getElementById("mo" + tablePos).innerHTML = modus;
-    document.getElementById("refs" + tablePos).innerHTML = refs;
-    document.getElementById("tools" + tablePos).innerHTML = tools;
-    var newAPT = {name: name, altName: altName, target:target, vector:vector, malware:malware, ttp:ttp, modus:modus, refs:refs, toolset:tools}
-    apts.push(newAPT);
-    ++tablePos;
+
+    if(name == "" || target == "" || vector ==""){
+        alert("Please enter required fields (Marked by *)");
+    }
+    else{
+        document.getElementById("name" + tablePos).innerHTML = name;
+        document.getElementById("alt" + tablePos).innerHTML = altName;
+        document.getElementById("target" + tablePos).innerHTML = target;
+        document.getElementById("vector" + tablePos).innerHTML = vector;
+        document.getElementById("malware" + tablePos).innerHTML = malware;
+        document.getElementById("ttp" + tablePos).innerHTML = ttp;
+        document.getElementById("mo" + tablePos).innerHTML = modus;
+        document.getElementById("refs" + tablePos).innerHTML = refs;
+        document.getElementById("tools" + tablePos).innerHTML = tools;
+        /*
+        document.getElementById("name"+tablePos).style.display = "inline";
+        document.getElementById("alt" + tablePos).style.display = "inline";
+        document.getElementById("target" + tablePos).style.display = "inline";
+        document.getElementById("vector" + tablePos).style.display = "inline";
+        document.getElementById("malware" + tablePos).style.display = "inline";
+        document.getElementById("ttp" + tablePos).style.display = "inline";
+        document.getElementById("mo" + tablePos).style.display = "inline";
+        document.getElementById("refs" + tablePos).style.display = "inline";
+        document.getElementById("tools" + tablePos).style.display = "inline";
+        */
+        var newAPT = {name: name, altName: altName, target:target, vector:vector, malware:malware, ttp:ttp, modus:modus, refs:refs, toolset:tools}
+        apts.push(newAPT);
+        ++tablePos;
+        form.reset();
+    }
+    
     return false;
 }
